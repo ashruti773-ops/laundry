@@ -1,12 +1,9 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: Arial;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
-
-
-
 nav{
     display:flex;             
     justify-content:space-between;
@@ -22,94 +19,69 @@ nav{
 }
 
 
-
-.hero{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:60px;
+body {
+    background: #f4f8ff;
 }
 
-.hero-text{
-    width:50%;
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 10%;
+    min-height: 100vh;
 }
 
-.hero-text h1{
-    font-size:40px;
-    margin-bottom:20px;
+.hero-content {
+    max-width: 500px;
 }
 
-.hero-text span{
-    color:#1ea0e3;
+.hero-content h1 {
+    font-size: 32px;
+    color: #333;
 }
 
-.hero-text p{
-    margin-bottom:20px;
-    color:gray;
+.hero-content h2 {
+    font-size: 36px;
+    color: #007bff;
+    margin: 10px 0;
 }
 
-.hero-text button{
-    padding:12px 20px;
-    border:none;
-    background:#1ea0e3;
-    color:white;
-    border-radius:6px;
-    cursor:pointer;
+.hero-content p {
+    color: #555;
+    margin: 15px 0 25px;
+    line-height: 1.6;
 }
 
-.hero-img img{
-    width:350px;
+/* CTA Button */
+.cta-btn {
+    padding: 14px 28px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-
-@media (max-width: 992px){
-
-    nav{
-        padding:15px 30px;
-    }
-
-    .hero-text h1{
-        font-size:30px;   
-    }
-
-    .hero{
-        padding:40px;
-    }
-
-    .hero-img img{
-        width:250px;
-    }
+/* Hover Effect (IMPORTANT PART OF TASK) */
+.cta-btn:hover {
+    transform: scale(1.15) rotate(-6deg);
+    background: #0056b3;
 }
 
-@media (max-width: 600px){
+.hero-image img {
+    width: 300px;
+}
 
-   
-    .nav-links{
-        display:none;
+/* Responsive */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
     }
 
-    nav{
-        padding:15px;
-    }
-
-    .hero{
-        flex-direction:column; 
-        text-align:center;
-    }
-
-    .hero-text{
-        width:100%;
-    }
-
-    .hero-img{
-        margin-top:30px;
-    }
-
-    .hero-img img{
-        width:200px;
-    }
-
-    .hero-text h1{
-        font-size:24px;
+    .hero-image {
+        margin-top: 40px;
     }
 }
