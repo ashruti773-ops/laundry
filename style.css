@@ -1,115 +1,33 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+body{
+font-family: Arial;
+background:#f4f4f4;
+text-align:center;
 }
 
-body {
-    background-color: #f4f8fb;
+.container{
+background:white;
+padding:30px;
+width:300px;
+margin:auto;
+border-radius:10px;
+box-shadow:0px 0px 10px gray;
 }
 
-/* Header */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 80px;
-    background-color: white;
+input{
+width:90%;
+padding:8px;
+margin:8px;
 }
 
-.logo {
-    font-size: 22px;
-    font-weight: bold;
-    color: #007bff;
+button{
+padding:10px 20px;
+background:#007BFF;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
 }
 
-nav a {
-    margin: 0 15px;
-    text-decoration: blue;
-    color: #333;
-    font-weight: 500;
-}
-
-.nav-btn {
-    padding: 8px 18px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-
-.hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 80px;
-}
-
-.hero-left {
-    width: 50%;
-}
-
-.hero-left h1 {
-    font-size: 40px;
-    margin-bottom: 20px;
-}
-
-.hero-left span {
-    color: #007bff;
-}
-
-.hero-left p {
-    margin-bottom: 25px;
-    color: #555;
-    line-height: 1.6;
-}
-
-.hero-btn {
-    padding: 12px 25px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-.hero-right {
-    width: 40%;
-}
-
-.hero-right img {
-    width: 100%;
-}
-/* ================= HERO IMAGE ANIMATION ================= */
-
-.hero-right img {
-    width: 100%;
-    animation: orbitMove 4s infinite ease-in-out;
-}
-
-/* Keyframes */
-@keyframes orbitMove {
-
-    0% {
-        transform: translate(0px, 0px) scale(1);
-    }
-
-    25% {
-        transform: translate(20px, -20px) scale(0.95, 1.05);
-    }
-
-    50% {
-        transform: translate(40px, 0px) scale(1.05, 0.95);
-    }
-
-    75% {
-        transform: translate(20px, 20px) scale(0.95, 1.05);
-    }
-
-    100% {
-        transform: translate(0px, 0px) scale(1);
-    }
+button:hover{
+background:#0056b3;
 }

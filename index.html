@@ -1,36 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laundry services</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Compound Interest Calculator</title>
+<link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header>
-        <div class="logo">Logo</div>
-        <nav>
-            <a href="#">home</a>
-            <a href="#">services</a>
-            <a href="#">About</a>
-            <a href="#">contect</a>
-            
-        </nav>
-        <button class="nav-btn">Get started</button>
-         
-    </header>
-    <section class="hero">
-        <div class="hero-left">
-            <h1>Revitalize Your Clothes with Expert <span>Laundry Services!</span></h1>
-            <p> From washing and drying to ironing and folding, we provide
-                complete laundry solutions to keep your clothes fresh and clean.</p>
-                <button class="hero-btn">Book a service Today</button>
 
-        </div>
-        <div class="hero-right">
-            <img src="https://static.vecteezy.com/system/resources/previews/026/721/206/non_2x/washing-machine-and-laundry-laundry-sticker-png.png" alt="laundry image">
-        </div>
-    </section>
-    
+<body>
+
+<h1>Compound Interest Calculator</h1>
+
+<div class="container">
+
+<label>Principal Amount:</label>
+<input type="number" id="principal">
+
+<label>Interest Rate (%):</label>
+<input type="number" id="rate">
+
+<label>Time (Years):</label>
+<input type="number" id="time">
+
+<label>Compounded Per Year:</label>
+<input type="number" id="n">
+
+<button onclick="calculateCI()">Calculate</button>
+
+<h2 id="result"></h2>
+
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
