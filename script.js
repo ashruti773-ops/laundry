@@ -1,65 +1,57 @@
-function runProgram(){
+function findMax(arr){
+let max = arr[0];
 
-let num = Number(document.getElementById("number").value);
-let output = "";
+for(let i=1;i<arr.length;i++){
+if(arr[i] > max){
+max = arr[i];
+}
+}
 
-output += "Number: " + num + "\n\n";
+return max;
+}
 
 
-// 1️⃣ Sum of digits
-let temp = num;
+function findSum(arr){
 let sum = 0;
 
-while(temp > 0){
-let digit = temp % 10;
-sum += digit;
-temp = Math.floor(temp / 10);
+for(let i=0;i<arr.length;i++){
+sum += arr[i];
 }
 
-output += "Sum of digits: " + sum + "\n";
-
-output += "Factors: ";
-for(let i = 1; i <= num; i++){
-if(num % i === 0){
-output += i + " ";
-}
+return sum;
 }
 
-output += "\n";
 
+function countOdd(arr){
+let count = 0;
 
-
-let isPrime = true;
-
-if(num <= 1){
-isPrime = false;
-}
-
-for(let i = 2; i < num; i++){
-if(num % i === 0){
-isPrime = false;
-break;
+for(let i=0;i<arr.length;i++){
+if(arr[i] % 2 !== 0){
+count++;
 }
 }
 
-output += "Is Prime: " + (isPrime ? "Yes" : "No") + "\n";
-
-
-
-let digits = num.toString().length;
-temp = num;
-let armstrongSum = 0;
-
-while(temp > 0){
-let digit = temp % 10;
-armstrongSum += Math.pow(digit, digits);
-temp = Math.floor(temp / 10);
+return count;
 }
 
-output += "Is Armstrong: " + (armstrongSum === num ? "Yes" : "No");
 
-document.getElementById("output").textContent = output;
+function runProgram(){
+
+let numbers = [12, 5, 8, 21, 16, 7];
+
+let max = findMax(numbers);
+let sum = findSum(numbers);
+let oddCount = countOdd(numbers);
+
+let output = "";
+
+output += "Array: " + numbers + "\n";
+output += "Maximum number: " + max + "\n";
+output += "Sum of elements: " + sum + "\n";
+output += "Count of odd numbers: " + oddCount;
 
 console.log(output);
+
+document.getElementById("output").textContent = output;
 
 }
